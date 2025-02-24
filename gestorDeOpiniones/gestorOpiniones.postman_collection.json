@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "16a5ca29-c306-4f1c-a3f4-713619e038c7",
+		"name": "gestorOpiniones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956954"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "pramirez",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "789456Qa@",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "789456Qa@",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2036/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "pablo",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "ramirez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "pramirez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pramirez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "789456Qa@",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "98745632",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2036/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2036/v1/user/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"user",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JhOTdjODQwNGNhMGFmZTkzNjRkMDkiLCJ1c2VybmFtZSI6InByYW1pcmV6IiwibmFtZSI6InBhYmxvIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTc0MDI4MjE5OSwiZXhwIjoxNzQwMjkyOTk5fQ.7D1muNzJVbCXsKVYPeBZ4XmEKdkLXyMxF7GvUe6waFw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "david",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "realiquez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "drealiquez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "drealiquez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "789456Qa@",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "98745632",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2036/v1/user/updateUser/67ba97c8404ca0afe9364d09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"user",
+								"updateUser",
+								"67ba97c8404ca0afe9364d09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "789456Qa@",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "aaaaa123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2036/v1/user/updatePassword/67ba97c8404ca0afe9364d09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"user",
+								"updatePassword",
+								"67ba97c8404ca0afe9364d09"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "music",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla bla",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2036/v1/category/saveCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"category",
+								"saveCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "skip",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/category/getAllCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"category",
+								"getAllCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "movies",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "asdasdasd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/category/updateCategory/67bbeafff4e767b3a4866484",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"category",
+								"updateCategory",
+								"67bbeafff4e767b3a4866484"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2036/v1/category/deleteCategory/67bbeaf6f4e767b3a4866481",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"category",
+								"deleteCategory",
+								"67bbeaf6f4e767b3a4866481"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "publication",
+			"item": [
+				{
+					"name": "addPublication",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "nuevo album",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "67bbeafff4e767b3a4866484",
+									"type": "text"
+								},
+								{
+									"key": "mainText",
+									"value": "el cantante theWeekend lanza un nuevo album hurry up tomorrow",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/publication/addPublication/",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"publication",
+								"addPublication",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePublication",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "si",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "67bbeaedf4e767b3a486647e",
+									"type": "text"
+								},
+								{
+									"key": "mainText",
+									"value": "si",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/publication/updatePublication/67bbee34ea60d244c86f5fe1",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"publication",
+								"updatePublication",
+								"67bbee34ea60d244c86f5fe1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePublication",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2036/v1/publication/deletePublication/67bbf0e97694839fdc507a2a",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"publication",
+								"deletePublication",
+								"67bbf0e97694839fdc507a2a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "opinions",
+			"item": [
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "que albun mas feo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/comment/updateComment/67bbf5545bf76dc5d528b143",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"comment",
+								"updateComment",
+								"67bbf5545bf76dc5d528b143"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "ojalá sea un buen album",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2036/v1/comment/addComment/67bbee34ea60d244c86f5fe1",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"comment",
+								"addComment",
+								"67bbee34ea60d244c86f5fe1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiZTczNTBjMjdmYTExMWU5N2M3YzkiLCJ1c2VybmFtZSI6ImRyZXRhbmEiLCJuYW1lIjoiRGF2aWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDAzNjg0ODksImV4cCI6MTc0MDM3OTI4OX0.xwYLlc45MYUKqRwwJ_Qi10glRpuTsHMl_QtQuG8nGHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2036/v1/comment/deleteComment/67bbf5545bf76dc5d528b143",
+							"host": [
+								"localhost"
+							],
+							"port": "2036",
+							"path": [
+								"v1",
+								"comment",
+								"deleteComment",
+								"67bbf5545bf76dc5d528b143"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
